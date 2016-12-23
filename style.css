@@ -1,0 +1,342 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin:0;
+}
+body{
+	margin:0;
+	padding:0;
+	height:0;
+}
+.box{
+	
+	width:412px;
+	height: 412px;
+	position:absolute;
+	top:100px;
+	left:100px;
+	border:1px solid black;
+	display:inline-block;;
+	opacity:0.5;
+	z-index: -1;
+ }
+
+.chck{
+	
+	float:left;
+	width:41px;
+	height:41px;
+	border:1px dotted black;
+	background-color: aqua;
+	cursor:pointer;
+
+}
+.butt{
+	position : absolute;
+	width:200px;
+	height:50px;
+	border-radius: 20px;
+	outline: none;
+	left:450px;
+	top:275px;
+	background: aqua;
+}
+
+.boxa{
+	
+	width:412px;
+	height: 412px;
+	position:absolute;
+	top:100px;
+	left:600px;
+	opacity:0.5;
+	border:1px solid black;
+	display: inline-block;
+	z-index: -1;
+	
+
+
+
+}
+.result{
+	position:absolute;
+	width:400px;
+	height:200px;
+	border:1px solid black;
+	top:100px;
+	left:1200px;
+	text-align: center;
+	line-height: 40px;
+	position:relative;
+
+}
+h1{
+	color: blue;
+}
+#result{
+	color:aqua;
+
+}
+h3{
+	position:absolute;
+	top:100px;
+	left:60px;
+}
+.comp{
+	position:absolute;
+	top:140px;
+	left:100px;
+}
+.usr{
+	position:absolute;
+	top:140px;
+	left:305px;
+}
+.ships-h2{	
+	position: absolute;
+	top:900px;
+}
+.four{
+	margin:0;
+	padding:0;
+	width:180px;
+	height:48px;
+	top:520px;
+	left:600px;
+	position:absolute;
+	
+	
+}
+.four1{
+	position:relative;
+	width:166px;
+	height:43px;
+	background-color: none;
+	border:2px solid blue;
+	cursor:move;
+	
+
+}
+
+.four2{
+	position:relative;
+	display: inline-block;
+	margin:0;
+	padding:0;
+	float:left;
+	width:41px;
+	height:41px;
+	border:1px solid lightblue;
+	background-color: none;
+
+	
+	
+}
+.three2{
+	position:absolute;
+	top:570px;
+	left:600px;
+	width:180px;
+	height:48px;
+	
+}
+.three{
+	width:123px;
+	height:41px;
+	background-color: none;
+	border:2px solid blue;
+	position:absolute;
+	cursor:move;
+	
+}
+.two2{
+	position:absolute;
+	top:620px;
+	left:600px;
+	width:180px;
+	height:44px;
+	
+
+}
+.two{
+	width:82px;
+	height:41px;
+	background-color: none;
+	border:2px solid blue;
+	position:absolute;
+	cursor:move;
+	
+}
+.one2{
+	position:absolute;
+	top:670px;
+	left:600px;
+	width:180px;
+	height:44px;
+	
+}
+.one{
+	width:41px;
+	height:41px;
+	
+	position:absolute;
+	background-color: none;
+	border:2px solid blue;
+	cursor:move;
+}
+
+.congra{
+	width:200px;
+	height:100px;
+	visibility:hidden;
+	border-radius:10px;
+	background-color: aqua;
+	transition:1s;
+	text-align: center;
+	color:green;
+	line-height: 100px;
+	font-size:35px;
+	position:absolute;
+	top:0;
+	left:68%;
+	animation:congrastop 2s infinite;
+	
+
+}
+
+.butta{
+	
+	width:200px;
+	height:50px;
+	border-radius: 20px;
+	outline: none;
+	
+
+	background: aqua;
+	font-size:20px;
+	visibility: hidden;
+}
+.note1{
+	position: absolute;
+	width: 550px;
+	height: 50px;
+	top:20px;
+	left:250px;
+	border-radius:20px;
+	background-color: lightgray;
+	visibility: hidden;
+}
+
+.note{
+	width:300px;
+	height:50px;
+
+	margin-left:30px;
+	color:black;
+	font-size:20px;
+	
+	visibility: hidden;
+	float:left;
+
+
+}
+
+.congratula{
+	width:419px;
+	height: 200px;
+	background-color: aqua;
+	z-index:10;
+	position: absolute;
+	left:347px;
+	border-radius: 15px;
+	visibility: hidden;
+	
+
+
+}
+.congratula span{
+	font-size:50px;
+}
+.congratula .restart{
+	margin-top:40px;
+	width:150px;
+	height:50px;
+	border-radius: 15px;
+	font-size:20px;
+	background-color:lightblue;
+}
+.congratula .restart a{
+	text-decoration: none;
+	color:black;
+}
+
+
+.congratula1{
+	width:419px;
+	height: 200px;
+	background-color: aqua;
+	z-index:10;
+	position: absolute;
+	left:347px;
+	border-radius: 15px;
+	visibility: hidden;
+	
+
+
+}
+.congratula1 span{
+	font-size:50px;
+}
+.congratula1 .restart1{
+	margin-top:40px;
+	width:150px;
+	height:50px;
+	border-radius: 15px;
+	font-size:20px;
+	background-color:lightblue;
+}
+.congratula1 .restart1 a{
+	text-decoration: none;
+	color:black;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes congramove {
+    0% {top:1%; visibility:  initial;}
+    20% {top:3%;visibility:  initial;}
+    90%{visibility: hidden;}
+   
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes congramove {
+     0% {top:1%;	visibility:  initial;}
+    20% {top:3%; 	visibility:  initial;}
+ 	90%{visibility: hidden;}
+ }
+
+@keyframes congrastop {
+     0% {visibility:  hidden;}
+   100%{visibility:  hidden;}
+}
+
+@keyframes congrastop {
+   0% {visibility:  hidden;}
+   
+    100% {visibility:  hidden;}
+}
+
+
+
+@-webkit-keyframes congratula {
+    0% {top:150px; visibility: initial;}
+    20% {top:200px;visibility: initial;}
+    90%{visibility: initial;}
+   
+}
+
+@-webkit-keyframes congratula1 {
+    0% {top:150px; visibility: initial;}
+    20% {top:200px;visibility: initial;}
+    90%{visibility: initial;}
+   
+}
