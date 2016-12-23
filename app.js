@@ -47,6 +47,23 @@ var checkdataj1d=0;
 
 
 
+
+
+function load(){
+    var container = document.getElementById("di");
+	var container1=document.getElementById("di2");
+	for (var i = 1; i <= 10; i++) {
+		for (var j = 1; j <= 10; j++) {
+			container.innerHTML += '<div class="chck" id="ch1" data-i='+i+' data-j='+j+'></div>';
+			container1.innerHTML += '<div class="chck" id="ch1" data-i1='+i+' data-j='+j+'></div>';
+
+		}
+	}
+	console.log(container);
+	console.log(container1);
+}
+
+
 var p=1;
 
 
