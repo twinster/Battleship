@@ -44,11 +44,6 @@ var checkdatai1d=0;
 var checkdataj1d=0;
 
 
-
-
-
-
-
 function load(){
     var container = document.getElementById("di");
 	var container1=document.getElementById("di2");
@@ -100,8 +95,7 @@ var ar=[
 
 function Startgame(){
 
-
-
+	//results
 	document.getElementById("userscore").innerHTML=" "+0+" ";
 	document.getElementById("compscore").innerHTML=" "+0+" ";
 
@@ -748,9 +742,7 @@ function ready(){
 		var div=document.getElementsByClassName("chck")[i];
 		div.setAttribute("onmousedown","shootcomp(this)");
 		div.setAttribute("onmouseup","shootcompup(this)");
-		
-
-}
+	}
 	document.getElementById("di2").removeAttribute("ondrop");
 	document.getElementById("di2").removeAttribute("ondragover");
 	document.getElementById("di2").removeAttribute("ondragleave");
@@ -778,16 +770,17 @@ function ready(){
 		document.getElementsByClassName("three")[i].style.cursor="default";
 	}
 
+	var turn=Math.floor(Math.random()*2);
+	if(turn==1){
+		document.getElementById("result").innerHTML="Computer turn";
+		myVar = setTimeout(function() { shootuser() }, 1000);
 
-
-	
+	}
+	else {
+		document.getElementById("result").innerHTML="User turn";
+	}
 	var elem = document.getElementById('note1');
 	elem.parentNode.removeChild(elem);
-
-
-
-
-	
 }
 
 
@@ -827,8 +820,9 @@ function shootcomp(event){
 			}
 			else{
 				firstbox.style.backgroundColor="white";
-				console.log('-------');
-				shootuser();
+				document.getElementById("result").innerHTML="Computer turn";				
+				myVar = setTimeout(function() { shootuser() }, 1000);
+				
 
 			}
 			//secondbox.style.backgroundColor="white";
@@ -852,7 +846,7 @@ function shootcomp(event){
 
 function shootuser(){
 //randomly shoots computer to user
-			
+		
 		var check=0;
 		var row12=-2;
 		var col12=-2;
@@ -889,7 +883,8 @@ function shootuser(){
  			console.log(computerpoint);
  			document.getElementById("compscore").innerHTML=" "+computerpoint+" ";
  			test=0;
- 			shootuser();
+ 			
+ 			myVar = setTimeout(function() { shootuser() }, 1000);
 
 
  			
@@ -897,7 +892,9 @@ function shootuser(){
 
  		}
  		else{
+
  			pos.style.backgroundColor="white";
+ 			document.getElementById("result").innerHTML="User turn";
  		}
 
 		
@@ -1513,17 +1510,6 @@ function edit(ev){
     					}
     					else {
     						alert("please choose correct place");
-    					// 	if(checkdatai2a!=0 && checkdataj2a!=0){
-	        // 					for(var i=checkdatai2a-1;i<checkdatai2a+2;i++){
-	    				// 			for(var j=checkdataj2a-1;j<checkdataj2a+3;j++){
-	    				// 				userar[i][j]--;
-	    				// 			if(j<checkdataj2a+1){
-	    				// 				userar[checkdatai2a][j+1]=-1000;
-	    								
-	    				// 			}
-									// } 						
-	    				// 		}
-    					// 	}
     						
     						console.table(userar);
     						console.log("jonjoli");
