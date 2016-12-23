@@ -1,2 +1,2 @@
-git by ilia gochitashvili changed by ilia from work
+Battle ship Game made by ilia gochitashvili 
 
