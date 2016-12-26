@@ -24,8 +24,8 @@ body{
 .chck{
 	
 	float:left;
-	width:41px;
-	height:41px;
+	width:10%;
+	height:10%;
 	border:1px dotted black;
 	background-color: aqua;
 	cursor:pointer;

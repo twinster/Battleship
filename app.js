@@ -162,21 +162,21 @@ function Startgame(){
 
 		var rw=Math.ceil(Math.random()*10);
 		var cl=Math.ceil(Math.random()*10);
-		if(ar[rw][cl]>=3){
+		if(ar[rw][cl]>=3  && rw<=8){
 		var sum=0;
-		for (var j = cl; j <cl+3 ; j++) {
-			sum+=compar[rw][j];
+		for (var i = rw; i <rw+3 ; i++) {
+			sum+=compar[i][cl];
 		}
 
 		
-		for (var i = rw-1; i <rw+2 ; i++) {
-			for (var j = cl-1; j <cl+4 ; j++) {
+		for (var i = rw-1; i <rw+4 ; i++) {
+			for (var j = cl-1; j <cl+2 ; j++) {
 				
 				
 				if(sum==0){
-					compar[i][j]=-1;
-					if(j<cl+2){
-						compar[rw][j+1]=-1000;
+					compar[i][j]--;
+					if(i<rw+2){
+						compar[i+1][cl]=-999;
 					}
 					ch3a=1;
 
@@ -184,9 +184,9 @@ function Startgame(){
 
 				}
 			}
+		}
 
 		}
-	}
 
 
 		//rand for ship3b
@@ -228,21 +228,21 @@ function Startgame(){
 
 		var rw=Math.ceil(Math.random()*10);
 		var cl=Math.ceil(Math.random()*10);
-		if(ar[rw][cl]>=2){
+		if(ar[rw][cl]>=2 && rw<=9){
 		var sum=0;
-		for (var j = cl; j <cl+2 ; j++) {
-			sum+=compar[rw][j];
+		for (var i = rw; i <rw+2 ; i++) {
+			sum+=compar[i][cl];
 		}
 
 		
-		for (var i = rw-1; i <rw+2 ; i++) {
-			for (var j = cl-1; j <cl+3 ; j++) {
+		for (var i = rw-1; i <rw+3 ; i++) {
+			for (var j = cl-1; j <cl+2 ; j++) {
 				
 				
-				if(sum==0){
-					compar[i][j]=-1;
-					if(j<cl+1){
-						compar[rw][j+1]=-1000;
+				if(sum==0 ){
+					compar[i][j]--;
+					if(i<rw+1){
+						compar[i+1][cl]=-999;
 					}
 					ch2a=1;
 
@@ -250,9 +250,10 @@ function Startgame(){
 
 				}
 			}
+		}
 
 		}
-	}
+		
 		//rand for chip2b
 		var ch2b=0;
 		while(ch2b==0){
@@ -292,21 +293,21 @@ function Startgame(){
 
 		var rw=Math.ceil(Math.random()*10);
 		var cl=Math.ceil(Math.random()*10);
-		if(ar[rw][cl]>=2){
+		if(ar[rw][cl]>=2 && rw<=9){
 		var sum=0;
-		for (var j = cl; j <cl+2 ; j++) {
-			sum+=compar[rw][j];
+		for (var i = rw; i <rw+2 ; i++) {
+			sum+=compar[i][cl];
 		}
 
 		
-		for (var i = rw-1; i <rw+2 ; i++) {
-			for (var j = cl-1; j <cl+3 ; j++) {
+		for (var i = rw-1; i <rw+3 ; i++) {
+			for (var j = cl-1; j <cl+2 ; j++) {
 				
 				
 				if(sum==0){
-					compar[i][j]=-1;
-					if(j<cl+1){
-						compar[rw][j+1]=-1000;
+					compar[i][j]--;
+					if(i<rw+1){
+						compar[i+1][cl]=-999;
 					}
 					ch2c=1;
 
@@ -314,9 +315,9 @@ function Startgame(){
 
 				}
 			}
+		}
 
 		}
-	}
 		
 
 
@@ -373,31 +374,32 @@ function Startgame(){
 
 		var rw=Math.ceil(Math.random()*10);
 		var cl=Math.ceil(Math.random()*10);
-		if(ar[rw][cl]>=3){
+		if(ar[rw][cl]>=3 && cl<=8){
 		var sum=0;
-		for (var i = rw; i <rw+3 ; i++) {
-			sum+=compar[i][cl];
+		for (var j = cl; j <cl+3 ; j++) {
+			sum+=compar[rw][j];
 		}
 
 		
-		for (var i = rw-1; i <rw+4 ; i++) {
-			for (var j = cl-1; j <cl+2 ; j++) {
+		for (var i = rw-1; i <rw+2 ; i++) {
+			for (var j = cl-1; j <cl+4 ; j++) {
 				
 				
 				if(sum==0){
-					compar[i][j]--;
-					if(i<rw+2){
-						compar[i+1][cl]=-999;
+					compar[i][j]=-1;
+					if(j<cl+2){
+						compar[rw][j+1]=-1000;
 					}
 					ch3a=1;
 
 					}
 
+					}
 				}
+
 			}
 		}
-
-		}
+		
 		//rand for  ship3b
 		var ch3b=0;
 		while(ch3b==0){
@@ -437,21 +439,21 @@ function Startgame(){
 
 		var rw=Math.ceil(Math.random()*10);
 		var cl=Math.ceil(Math.random()*10);
-		if(ar[rw][cl]>=2){
+		if(ar[rw][cl]>=2 && cl<=9){
 		var sum=0;
-		for (var i = rw; i <rw+2 ; i++) {
-			sum+=compar[i][cl];
+		for (var j = cl; j <cl+2 ; j++) {
+			sum+=compar[rw][j];
 		}
 
 		
-		for (var i = rw-1; i <rw+3 ; i++) {
-			for (var j = cl-1; j <cl+2 ; j++) {
+		for (var i = rw-1; i <rw+2 ; i++) {
+			for (var j = cl-1; j <cl+3 ; j++) {
 				
 				
 				if(sum==0){
-					compar[i][j]--;
-					if(i<rw+1){
-						compar[i+1][cl]=-999;
+					compar[i][j]=-1;
+					if(j<cl+1){
+						compar[rw][j+1]=-1000;
 					}
 					ch2a=1;
 
@@ -459,9 +461,10 @@ function Startgame(){
 
 				}
 			}
-		}
 
 		}
+	}
+		
 		//rand for ship2b
 		
 		var ch2b=0;
@@ -504,21 +507,21 @@ function Startgame(){
 
 		var rw=Math.ceil(Math.random()*10);
 		var cl=Math.ceil(Math.random()*10);
-		if(ar[rw][cl]>=2){
+		if(ar[rw][cl]>=2 && cl<=9){
 		var sum=0;
-		for (var i = rw; i <rw+2 ; i++) {
-			sum+=compar[i][cl];
+		for (var j = cl; j <cl+2 ; j++) {
+			sum+=compar[rw][j];
 		}
 
 		
-		for (var i = rw-1; i <rw+3 ; i++) {
-			for (var j = cl-1; j <cl+2 ; j++) {
+		for (var i = rw-1; i <rw+2 ; i++) {
+			for (var j = cl-1; j <cl+3 ; j++) {
 				
 				
 				if(sum==0){
-					compar[i][j]--;
-					if(i<rw+1){
-						compar[i+1][cl]=-999;
+					compar[i][j]=-1;
+					if(j<cl+1){
+						compar[rw][j+1]=-1000;
 					}
 					ch2c=1;
 
@@ -526,59 +529,16 @@ function Startgame(){
 
 				}
 			}
-		}
 
 		}
+	}
+		
 
 		
 
 
 
 }
-
-
-		else if(m==3) {
-			for (var i = 10; i >=1; i--) {
-				for (var j = 10; j >=1; j--) {
-					if (i>=4){
-						ar[i][j]=4;
-					}
-					if(i==3){
-						ar[i][j]=3;
-					}
-					if(i==2){
-						ar[i][j]=2;
-					}
-					if(i==1){
-						ar[i][j]=1;
-					}
-
-				}	
-			}
-		}
-
-		else if(m==4) {
-			for (var i = 10; i >=1; i--) {
-				for (var j = 10; j >=1; j--) {
-					if (j>=4){
-						ar[i][j]=4;
-					}
-					if(j==3){
-						ar[i][j]=3;
-					}
-					if(j==2){
-						ar[i][j]=2;
-					}
-					if(j==1){
-						ar[i][j]=1;
-					}
-
-				}	
-			}
-		}
-		
-
-
 		//rand for ship1a
 		var ch1a=0;
 		while(ch1a==0){
@@ -700,21 +660,6 @@ function Startgame(){
 		console.table(compar);
 
 
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
 	var elem = document.getElementById('button');
 	document.getElementById("di").style.opacity=1;
 	document.getElementById("di2").style.opacity=1;
@@ -774,6 +719,12 @@ function ready(){
 	if(turn==1){
 		document.getElementById("result").innerHTML="Computer turn";
 		myVar = setTimeout(function() { shootuser() }, 1000);
+		for (var i=0; i<100;i++){
+				var div=document.getElementsByClassName("chck")[i];
+				div.removeAttribute("onmousedown","shootcomp(this)");
+				div.removeAttribute("onmouseup","shootcompup(this)");
+			}
+
 
 	}
 	else {
@@ -820,7 +771,13 @@ function shootcomp(event){
 			}
 			else{
 				firstbox.style.backgroundColor="white";
-				document.getElementById("result").innerHTML="Computer turn";				
+				document.getElementById("result").innerHTML="Computer turn";
+				for (var i=0; i<100;i++){
+				var div=document.getElementsByClassName("chck")[i];
+				div.removeAttribute("onmousedown","shootcomp(this)");
+				div.removeAttribute("onmouseup","shootcompup(this)");
+				}
+
 				myVar = setTimeout(function() { shootuser() }, 1000);
 				
 
@@ -898,7 +855,11 @@ function shootuser(){
  		}
 
 		
-
+ 		for (var i=0; i<100;i++){
+				var div=document.getElementsByClassName("chck")[i];
+				div.setAttribute("onmousedown","shootcomp(this)");
+				div.setAttribute("onmouseup","shootcompup(this)");
+		}
 		
 		if(computerpoint==20){
 			document.getElementById("result").innerHTML="You loose!!!";
